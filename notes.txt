@@ -1,4 +1,4 @@
-You run it in the order Ticker Symbols -> Statements -> Prices
+You run it in the order Ticker Symbols -> Statements -> Prices -> Market Caps
 
 Step2 Phase 1 was purely a solution for me because I already had a ton of data locally from previous failed attempts. For you you can just let it fail at that step and Step 2 Phase 2 will just call the API for it all.
 
