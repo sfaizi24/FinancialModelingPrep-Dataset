@@ -1,0 +1,254 @@
+About Dividends Company API
+The FMP Dividends Company API offers a comprehensive view of the dividend information for specific stocks. Designed for dividend-focused investors, this API delivers:
+
+Dividend Schedule Overview: Get access to upcoming dividend details, including record date, payment date, and declaration date, to ensure timely information on dividend payouts.
+Dividend Amount: View the dividend and adjusted dividend amounts to stay informed of expected payments.
+Yield Data: Track the dividend yield for stocks to better assess the return on investment for dividend-focused portfolios.
+Payment Frequency: Understand how often dividends are paid (e.g., quarterly, annually) to align your investment strategy with the stock’s payout schedule.
+With detailed dividend information such as the amount, adjusted dividend, yield, and payment frequency, investors can effectively plan around dividend schedules. This API is perfect for dividend investors who need up-to-date information to make informed decisions about their income-generating investments.
+
+Example Use Case
+A dividend investor can use the Dividends Company API to monitor Apple’s upcoming dividend payment, ensuring they hold the stock through the record date to receive the payment.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/dividends?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-02-10",
+		"recordDate": "2025-02-10",
+		"paymentDate": "2025-02-13",
+		"declarationDate": "2025-01-30",
+		"adjDividend": 0.25,
+		"dividend": 0.25,
+		"yield": 0.42955326460481097,
+		"frequency": "Quarterly"
+	}
+]
+
+
+About Dividends Calendar API
+The Dividend Events Calendar API provides a market-wide view of upcoming dividend events. Ideal for investors, financial analysts, and portfolio managers, this API enables:
+
+Comprehensive Dividend Calendar: View upcoming record, payment, and declaration dates for dividends across various stocks.
+Dividend Yield Tracking: Analyze the dividend yield to assess potential returns for each stock.
+Payment Frequency Details: Identify whether dividends are paid quarterly, annually, or at other intervals to plan future investments.
+Efficient Market Monitoring: Keep track of dividend events across the entire market to spot opportunities and trends.
+This API makes it easy for investors to stay ahead of dividend events and optimize their income strategies.
+
+Example Use Case
+A portfolio manager can use the Dividend Events Calendar API to keep track of upcoming dividend payments for all stocks in their portfolio, ensuring they don't miss important dividend events or payouts.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/dividends-calendar
+
+[
+	{
+		"symbol": "1D0.SI",
+		"date": "2025-02-04",
+		"recordDate": "",
+		"paymentDate": "",
+		"declarationDate": "",
+		"adjDividend": 0.01,
+		"dividend": 0.01,
+		"yield": 6.25,
+		"frequency": "Semi-Annual"
+	}
+]
+
+About Earnings Report API
+The Earnings Report API provides detailed insights into the earnings announcements of publicly traded companies. It’s designed for investors and analysts who need to monitor earnings reports closely to make informed trading and investment decisions, including:
+
+Earnings Report Timing: Track earnings announcements for specific companies, including whether reports are released after market close (amc) or before market open (bmo).
+EPS and Revenue Estimates: Access estimated earnings per share (EPS) and revenue data ahead of earnings announcements to understand market expectations.
+Performance Tracking: See how actual earnings compare to estimates once they are released, helping identify trends in company performance.
+Market Reaction Insights: Use earnings data to predict potential stock price movements based on whether a company beats or misses earnings expectations.
+This API is ideal for those looking to stay updated on company earnings and monitor how these reports may impact stock prices.
+
+Example Use Case
+A financial analyst can use the Earnings Report API to track Apple's upcoming earnings report, reviewing EPS and revenue estimates to predict how the stock might react after the earnings are announced.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/earnings?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-10-29",
+		"epsActual": null,
+		"epsEstimated": null,
+		"revenueActual": null,
+		"revenueEstimated": null,
+		"lastUpdated": "2025-02-04"
+	}
+]
+
+About Earnings Calendar API
+The FMP Earnings Calendar API is an essential tool for investors, traders, and financial analysts who need to stay updated on the earnings announcements of publicly traded companies. This API is valuable for:
+
+Tracking Earnings Announcements: Access a comprehensive list of upcoming and past earnings announcements, including the date of the announcement, estimated EPS, and actual EPS (if available).
+Informed Decision-Making: Earnings announcements provide crucial insights into a company's financial performance and future outlook. Use this data to make informed trading and investment decisions.
+Market Analysis: Analyze the earnings performance of various companies over time to identify trends, compare performance across industries, and assess the potential impact on stock prices.
+This API is a powerful resource for anyone who needs to monitor earnings announcements and use this information to guide their investment strategies.
+
+Example
+Trading Strategy: A trader might use the Earnings Calendar API to track the earnings announcements of key technology companies. By knowing the estimated and actual EPS ahead of time, the trader can prepare to make informed trades based on how the market reacts to the earnings results.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/earnings-calendar
+
+[
+	{
+		"symbol": "KEC.NS",
+		"date": "2024-11-04",
+		"epsActual": 3.32,
+		"epsEstimated": 4.97,
+		"revenueActual": 51133100000,
+		"revenueEstimated": 44687400000,
+		"lastUpdated": "2024-12-08"
+	}
+]
+
+About IPOs Calendar API
+The FMP IPO Calendar API provides critical information for investors and market analysts interested in tracking upcoming IPOs. This API allows users to monitor the latest companies preparing to go public, including:
+
+Upcoming IPO Dates: Stay informed on when companies are scheduled to go public, providing a clear timeline for new market entrants.
+Company Information: Retrieve company names and key details about their IPO plans, such as which exchange they will be listed on.
+Expected Pricing and Shares: View expected price ranges and the number of shares being offered (if available) to evaluate potential investment opportunities.
+Market Insights: Use the IPO calendar to identify emerging companies and assess the overall activity of new listings in the stock market.
+This API is a valuable tool for investors looking to capitalize on IPOs and track market activity related to new stock listings.
+
+Example Use Case
+A venture capitalist can use the IPO Calendar API to track new companies entering the stock market, evaluate pricing expectations, and identify potential investment opportunities.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/ipos-calendar
+
+[
+	{
+		"symbol": "PEVC",
+		"date": "2025-02-03",
+		"daa": "2025-02-03T05:00:00.000Z",
+		"company": "Pacer Funds Trust",
+		"exchange": "NYSE",
+		"actions": "Expected",
+		"shares": null,
+		"priceRange": null,
+		"marketCap": null
+	}
+]
+
+About Stock Split Details API
+The FMP Stock Split Details API is designed to offer critical insights into a company's stock split history. With this API, users can:
+
+Split Date Information: Access the exact date of a company's stock split to understand when the changes occurred.
+Split Ratio Details: Retrieve the split ratio, represented by the numerator and denominator, to see how many new shares are issued for every old share.
+Historical Reference: Track and analyze the impact of stock splits on a company's share price and market performance.
+This API is ideal for investors and analysts who need to monitor stock split events and assess their effects on stock ownership and market trends.
+
+Example Use Case
+An investor looking to track Apple's stock split history can use the Stock Split Details API to retrieve detailed data on the company's past splits, including the date and ratio, allowing them to assess how splits have impacted stock value over time.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/splits?symbol=AAPL
+
+
+About Stock Split Details API
+The FMP Stock Split Details API is designed to offer critical insights into a company's stock split history. With this API, users can:
+
+Split Date Information: Access the exact date of a company's stock split to understand when the changes occurred.
+Split Ratio Details: Retrieve the split ratio, represented by the numerator and denominator, to see how many new shares are issued for every old share.
+Historical Reference: Track and analyze the impact of stock splits on a company's share price and market performance.
+This API is ideal for investors and analysts who need to monitor stock split events and assess their effects on stock ownership and market trends.
+
+Example Use Case
+An investor looking to track Apple's stock split history can use the Stock Split Details API to retrieve detailed data on the company's past splits, including the date and ratio, allowing them to assess how splits have impacted stock value over time.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/splits?symbol=AAPL
+
+About Stock Chart Light API
+The FMP Basic Stock Chart API delivers streamlined access to stock charting data for users who need to track price movements without overwhelming complexity. This API offers:
+
+Date & Price Information: Easily track daily price movements for a specific stock symbol.
+Volume Data: Stay informed about trading activity with volume data included for each date.
+Basic Charting Needs: Ideal for generating simple stock price and volume charts for historical performance analysis.
+This API is perfect for users and developers who want a quick, straightforward way to visualize stock data without the need for detailed technical indicators.
+
+Example Use Case
+A financial app can use the Basic Stock Chart API to display a minimal chart showing a stock’s daily closing price and volume, allowing users to quickly assess its performance over time.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/historical-price-eod/light?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-02-04",
+		"price": 232.8,
+		"volume": 44489128
+	}
+]
+
+About Unadjusted Stock Price API
+The FMP Unadjusted Stock Price Chart API provides unadjusted historical price data, allowing traders, analysts, and investors to view stock performance without split-related adjustments. This is useful for users who want a clear view of how stock prices moved before and after stock splits. Key features include:
+
+Unadjusted Price Data: Access historical stock prices—open, high, low, and close—without any adjustments for stock splits.
+Volume Data: Retrieve daily trading volume for further analysis of market activity.
+Pre-Split Analysis: See how stock prices performed in their original form, making it easier to analyze trends prior to a split event.
+Clear Historical View: For investors and analysts looking to avoid the distortions caused by stock splits, this API delivers clear and unmodified data.This API is ideal for anyone who needs accurate, split-free stock data for more precise historical analysis.
+Example Use Case
+A market researcher analyzing Apple stock performance before and after a split can use the Unadjusted Stock Price Chart API to get a clear view of stock prices without any split-related adjustments.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-02-04",
+		"adjOpen": 227.2,
+		"adjHigh": 233.13,
+		"adjLow": 226.65,
+		"adjClose": 232.8,
+		"volume": 44489128
+	}
+]
+
+About Dividend Adjusted Price Chart API
+The FMP Dividend-Adjusted Price Chart API delivers EOD (end-of-day) price data that is adjusted for dividends, helping traders, analysts, and investors understand stock performance while factoring in dividend payments. This ensures a more accurate analysis of stock value changes, particularly for companies with regular dividend payouts. Features include:
+
+Dividend-Adjusted Prices: Access historical stock prices—open, high, low, and close—that have been adjusted for dividend payouts, reflecting the true stock value.
+Volume Data: Retrieve daily trading volume to assess market activity alongside price movements.
+Accurate Performance Analysis: Use dividend-adjusted data to evaluate a stock’s performance over time with the impact of dividends factored in.
+Enhanced Historical Insights: Ideal for long-term investors who want a clearer picture of stock growth and performance, while including the effect of dividends.
+This API is a valuable tool for understanding total returns, making it easier to gauge a stock’s historical performance by incorporating dividend impacts.
+
+Example Use Case
+An investor tracking the historical growth of Apple stock can use the Dividend-Adjusted Price Chart API to account for the effect of dividend payouts when analyzing stock price changes over time.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/historical-price-eod/dividend-adjusted?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-02-04",
+		"adjOpen": 227.2,
+		"adjHigh": 233.13,
+		"adjLow": 226.65,
+		"adjClose": 232.8,
+		"volume": 44489128
+	}
+]

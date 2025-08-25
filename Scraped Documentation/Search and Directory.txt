@@ -1,0 +1,194 @@
+About Stock Symbol Search API
+The FMP Stock Symbol Search API allows users to quickly and efficiently locate stock ticker symbols. Whether you're searching for U.S. stocks, international equities, or ETFs, this API provides fast, reliable results. Key features include:
+
+Simple Search: Enter a company name or ticker symbol to retrieve essential details like the symbol, company name, exchange, and currency.
+Global Market Access: Search across major stock exchanges, including NASDAQ, NYSE, and more.
+Accurate and Up-to-Date: The API delivers real-time results, ensuring you're always working with the latest ticker information.
+The Stock Symbol Search API is perfect for traders, investors, or anyone needing quick access to stock symbols across different markets.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/search-symbol?query=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"name": "Apple Inc.",
+		"currency": "USD",
+		"exchangeFullName": "NASDAQ Global Select",
+		"exchange": "NASDAQ"
+	}
+]
+
+About Company Name Search API
+The FMP Name Search API provides an easy way to find the ticker symbols and exchange information for companies and ETFs. This endpoint is useful for retrieving ticker symbols when you know the company or asset name but not the symbol identifier.
+
+Key Features of the Name Search API
+
+Simple Company Name Lookup: Enter a company or asset name, and retrieve the corresponding ticker symbol, company name, and exchange details.
+Equity Securities and ETFs: Supports searches for a variety of listed equity securities and exchange-traded funds (ETFs) across major exchanges.
+Accurate and Up-to-Date Data: Receive real-time, accurate search results, ensuring you're always working with the latest available information.
+How Investors and Analysts Can Benefit
+
+Quick Symbol Lookup: Easily locate ticker symbols when you know the company name but not the corresponding symbol.
+Broad Market Coverage: Search across multiple exchanges for both domestic and international companies, helping you stay informed about different markets.
+Streamlined Workflow: Enhance your research and investment decisions by quickly identifying the correct symbols for analysis or trade execution.
+Endpoint:
+
+https://financialmodelingprep.com/stable/search-name?query=AA
+
+[
+	{
+		"symbol": "AAGUSD",
+		"name": "AAG USD",
+		"currency": "USD",
+		"exchangeFullName": "CCC",
+		"exchange": "CRYPTO"
+	}
+]
+
+About CIK API
+The FMP CIK API is an essential tool for financial professionals, compliance officers, and analysts who need to quickly and accurately retrieve the Central Index Key (CIK) for a specific company. The CIK is a unique identifier used by the U.S. Securities and Exchange Commission (SEC) to track company filings, making it crucial for accessing corporate disclosures and financial data.
+
+Key Features of the CIK API
+
+Quick CIK Lookup: Retrieve a company’s CIK by entering its symbol or name, allowing for efficient access to SEC filings and other regulatory information.
+Essential for Compliance: Ensure accurate and timely access to SEC filings for regulatory compliance and corporate governance purposes.
+Comprehensive Market Coverage: Search for CIKs across companies listed on major U.S. stock exchanges like NASDAQ and the NYSE.
+The CIK API is invaluable for anyone dealing with corporate filings and compliance, providing seamless access to essential company identifiers.
+
+Example: Streamlined SEC Filings: A compliance officer can use the CIK API to quickly find a company’s CIK number and use it to retrieve all relevant SEC filings. This enables efficient monitoring of regulatory disclosures and financial statements.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/search-cik?cik=320193
+
+[
+	{
+		"symbol": "AAPL",
+		"companyName": "Apple Inc.",
+		"cik": "0000320193",
+		"exchangeFullName": "NASDAQ Global Select",
+		"exchange": "NASDAQ",
+		"currency": "USD"
+	}
+]
+
+About Stock Screener API
+The FMP Company Stock Screener API is a versatile tool designed to help investors find stocks that meet their specific investment criteria. This API is essential for:
+
+Customizable Stock Searches: Screen stocks based on a wide range of criteria, including market cap, price, trading volume, beta, sector, and country. Tailor your searches to match your investment goals.
+Financial Criteria Filters: Go beyond basic metrics by screening stocks based on financial performance indicators such as profitability, growth, and valuation metrics, ensuring you find stocks that fit your financial strategy.
+Investment Opportunities: Use the Stock Screener API to build watchlists, identify new investment opportunities, and perform in-depth portfolio analysis.
+Whether you’re a beginner or an experienced investor, this API is a valuable resource for discovering stocks that align with your investment approach.
+
+Example
+Building a Watchlist: An investor interested in technology stocks with a market cap of over $10 billion can use the Stock Screener API to filter and create a watchlist of potential investment opportunities. The investor can further refine the list based on other criteria such as beta and trading volume.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/company-screener
+
+[
+	{
+		"symbol": "AAPL",
+		"companyName": "Apple Inc.",
+		"marketCap": 3435062313000,
+		"sector": "Technology",
+		"industry": "Consumer Electronics",
+		"beta": 1.24,
+		"price": 225.93,
+		"lastAnnualDividend": 1,
+		"volume": 43010091,
+		"exchange": "NASDAQ Global Select",
+		"exchangeShortName": "NASDAQ",
+		"country": "US",
+		"isEtf": false,
+		"isFund": false,
+		"isActivelyTrading": true
+	}
+]
+
+About Company Symbols List API
+The FMP Company Symbols List API is a valuable resource for investors, traders, and financial analysts who need to quickly obtain a complete list of symbols for publicly traded companies and financial instruments. This API is essential for:
+
+Comprehensive Symbol Retrieval: Gain access to a vast database of stock symbols, including equities, ETFs, and other financial instruments across global exchanges.
+Multi-Market Coverage: Explore a wide variety of symbols from major stock exchanges around the world, ensuring that you have the necessary data to make informed trading decisions.
+Accurate Company Information: Each symbol comes with relevant details such as the company name, providing context for each financial instrument in the list.
+This API is ideal for those who need a quick and easy way to retrieve a complete list of stock symbols or financial instruments across multiple markets.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/stock-list
+
+[
+	{
+		"symbol": "6898.HK",
+		"companyName": "China Aluminum Cans Holdings Limited"
+	}
+]
+
+About Financial Statement Symbols List API
+The FMP Financial Statement Symbols List API provides a complete list of companies for which financial statements are available through our API. This endpoint is essential for:
+
+Comprehensive Company Coverage: Discover all companies with available financial statements, including those listed on major exchanges like the NYSE and NASDAQ, as well as international exchanges.
+Access to Global Financial Data: Gain insights into companies from around the world by accessing their financial statements through this extensive symbol list.
+Up-to-Date Information: Stay informed with regularly updated lists, ensuring you have access to the latest financial statements for public companies.
+Example: An investor can use the Financial Statement Symbols List API to find the ticker symbol for a company they are interested in, access its financial statements, and make informed investment decisions based on the latest available data.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/financial-statement-symbol-list
+
+[
+	{
+		"symbol": "6898.HK",
+		"companyName": "China Aluminum Cans Holdings Limited",
+		"tradingCurrency": "HKD",
+		"reportingCurrency": "HKD"
+	}
+]
+
+About Symbol Changes List API
+The FMP Stock Symbol Changes API provides comprehensive data on recent stock symbol changes. This API is essential for:
+
+Accurate Trading: Symbol changes can occur for various reasons, including mergers, acquisitions, stock splits, and company name changes. Staying up-to-date with these changes ensures that your trading activities are accurate and error-free.
+Portfolio Management: By tracking symbol changes, you can ensure that your investment portfolio reflects the correct and current stock symbols, helping you avoid any discrepancies in your holdings.
+Efficient Stock Tracking: The API makes it easy to find the latest stock symbols, allowing you to quickly locate the stocks you need for trading, research, or analysis.
+This API is a valuable tool for traders, investors, and analysts who need to keep track of symbol changes to maintain the accuracy of their financial activities.
+
+Example: Trading Accuracy: A trader might use the Stock Symbol Changes API to update their trading platform with the latest stock symbols after a company undergoes a merger and changes its symbol. This ensures that their trades are executed correctly without any errors due to outdated information
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/symbol-change
+
+[
+	{
+		"date": "2025-02-03",
+		"companyName": "XPLR Infrastructure, LP Common Units representing limited partner interests",
+		"oldSymbol": "NEP",
+		"newSymbol": "XIFR"
+	}
+]
+
+About Actively Trading List API
+The FMP Actively Trading List API provides a comprehensive view of all companies and financial instruments actively traded across public exchanges. This API is essential for:
+
+Real-Time Market Monitoring: Stay updated with a list of companies and financial instruments that are currently being traded on global exchanges.
+Investment Opportunities: Quickly identify active securities to capitalize on current market movements, helping traders and investors make informed decisions.
+Customizable Filtering: Filter securities based on exchange, industry, or region, ensuring that you find the exact instruments relevant to your trading or investment strategy.
+This API is an invaluable tool for investors, traders, and analysts who need real-time data on actively traded securities to guide their decisions in the fast-moving financial markets.
+
+Example: A day trader can use the Actively Trading List API to retrieve a list of stocks that are currently being traded on the NASDAQ exchange, allowing them to focus on high-liquidity securities for potential trades throughout the day.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/actively-trading-list
+
+[
+	{
+		"symbol": "6898.HK",
+		"name": "China Aluminum Cans Holdings Limited"
+	}
+]

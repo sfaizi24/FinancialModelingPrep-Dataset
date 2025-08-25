@@ -1,0 +1,7 @@
+You run it in the order Ticker Symbols -> Statements -> Prices
+
+Step2 Phase 1 was purely a solution for me because I already had a ton of data locally from previous failed attempts. For you you can just let it fail at that step and Step 2 Phase 2 will just call the API for it all.
+
+I had to do weird stuff in Getting Price Data to get duckdb to be okay with my ipywidgets installation, ask chatgpt for help there
+
+My beautiful wife pointed out to me that Michaels (traded under MIK) is not featured in my dataset, even though it was publicly traded until being acquired by PE in 2021. I have 0 idea why it doesn't show up in the de-listed symbols endpoint, even though it does have price data on the chart endpoints. It looks like an error on FMPs part, and I have not checked to see if other de-listed companies are suffering from this as well. 

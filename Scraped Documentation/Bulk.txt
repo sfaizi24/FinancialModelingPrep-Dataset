@@ -1,0 +1,304 @@
+About Company Profile Bulk API
+The FMP Profile Bulk API provides detailed profiles of companies across global stock exchanges. This API is ideal for users who need to:
+
+Retrieve Comprehensive Data: Access company profiles that include stock prices, market capitalization, industry classification, and more.
+Bulk Data Requests: Get company details for multiple organizations in one API call, making data collection more efficient.
+Analyze Company Information: Use this data to gain insights into company operations, leadership, financials, and industry sectors.
+This API is highly beneficial for financial analysts, data scientists, and anyone needing extensive company profile data for various organizations.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/profile-bulk?part=0
+
+[
+	{
+		"symbol": "SLF",
+		"price": "61.83",
+		"marketCap": "34958743830",
+		"beta": "0.878",
+		"lastDividend": "2.41717",
+		"range": "46.41-66.81",
+		"change": "-0.34",
+		"changePercentage": "-0.54689",
+		"volume": "225310",
+		"averageVolume": "631001",
+		"companyName": "Sun Life Financial Inc.",
+		"currency": "USD",
+		"cik": "0001097362",
+		"isin": "CA8667961053",
+		"cusip": "866796105",
+		"exchangeFullName": "New York Stock Exchange",
+		"exchange": "NYSE",
+		"industry": "Insurance - Diversified",
+		"website": "https://www.sunlife.com",
+		"description": "Sun Life Financial Inc.",
+		"ceo": "a financial services company",
+		"sector": "provides insurance",
+		"country": "wealth",
+		"fullTimeEmployees": "and asset management solutions to individuals and corporate clients worldwide. It offers term and permanent life",
+		"phone": "as well as personal health",
+		"address": "dental",
+		"city": "critical illness",
+		"state": "long-term care",
+		"zip": "and disability insurance products. The company also provides reinsurance products; investment counselling and portfolio management services; mutual funds and segregated funds; trust and banking services; real estate property brokerage and appraisal services; and merchant banking services. It distributes its products through direct sales agents",
+		"image": "managing and independent general agents",
+		"ipoDate": "financial intermediaries",
+		"defaultImage": "broker-dealers",
+		"isEtf": "banks",
+		"isActivelyTrading": "pension and benefits consultants",
+		"isAdr": "and other third-party marketing organizations. The company was founded in 1871 and is headquartered in Toronto",
+		"isFund": "Canada."
+	}
+]
+
+
+About ETF Holder Bulk API
+The ETF Holder Bulk API enables users to access:
+
+Comprehensive Asset Lists: Retrieve a list of all assets held by an ETF, including individual stocks, bonds, and other securities.
+
+Share Information: View the number of shares an ETF holds for each asset, providing clarity on the distribution of holdings.
+Weight Percentage: Analyze the percentage weight of each asset within the ETF, helping investors understand its contribution to the ETF's overall value.
+Market Value: Get up-to-date market values for each asset held by the ETF, giving a complete picture of the ETF's composition.
+ISIN and CUSIP Identifiers: Identify assets by their ISIN or CUSIP for more precise tracking and research.
+The ETF Holder Bulk API is an essential tool for financial analysts, institutional investors, and portfolio managers who need to analyze ETF composition, asset allocation, and potential risks or opportunities.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/etf-holder-bulk?part=1
+
+[
+	{
+		"symbol": "EXCH.AS",
+		"name": "SAMSUNG ELECTRO MECHANICS LTD",
+		"sharesNumber": "15514",
+		"asset": "009150.KS",
+		"weightPercentage": "0.09611",
+		"cusip": "",
+		"isin": "KR7009150004",
+		"marketValue": "1553142.49",
+		"lastUpdated\"": "2024-09-06\""
+	}
+]
+
+About Income Statement Bulk API
+The Bulk Income Statement API is ideal for users who need to:
+
+Analyze Financial Performance: Access large datasets for deep financial analysis, including multiple income statements from various companies.
+Track Revenue and Profit Trends: Quickly retrieve data on revenue, gross profit, operating income, and net income to assess a company's profitability over time.
+Evaluate Expenses: Review operating expenses, cost of revenue, and selling, general, and administrative expenses (SG&A) to identify where a company allocates its spending.
+Conduct Bulk Research: Ideal for financial analysts, investors, and researchers who need to process income statements across multiple companies for detailed industry or sector comparison.
+This API delivers financial data in a standardized format, making it easy to conduct large-scale financial analysis.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/income-statement-bulk?year=2025&period=Q1
+
+[
+	{
+		"date": "2025-03-31",
+		"symbol": "000001.SZ",
+		"reportedCurrency": "CNY",
+		"cik": "0000000000",
+		"filingDate": "2025-03-31",
+		"acceptedDate": "2025-03-31 00:00:00",
+		"fiscalYear": "2025",
+		"period": "Q1",
+		"revenue": "33644000000",
+		"costOfRevenue": "0",
+		"grossProfit": "33644000000",
+		"researchAndDevelopmentExpenses": "0",
+		"generalAndAdministrativeExpenses": "9055000000",
+		"sellingAndMarketingExpenses": "0",
+		"sellingGeneralAndAdministrativeExpenses": "9055000000",
+		"otherExpenses": "314000000",
+		"operatingExpenses": "9369000000",
+		"costAndExpenses": "9369000000",
+		"netInterestIncome": "22788000000",
+		"interestIncome": "44938000000",
+		"interestExpense": "22150000000",
+		"depreciationAndAmortization": "0",
+		"ebitda": "16802000000",
+		"ebit": "0",
+		"nonOperatingIncomeExcludingInterest": "24275000000",
+		"operatingIncome": "24275000000",
+		"totalOtherIncomeExpensesNet": "-7392000000",
+		"incomeBeforeTax": "16883000000",
+		"incomeTaxExpense": "2787000000",
+		"netIncomeFromContinuingOperations": "14096000000",
+		"netIncomeFromDiscontinuedOperations": "0",
+		"otherAdjustmentsToNetIncome": "0",
+		"netIncome": "14096000000",
+		"netIncomeDeductions": "0",
+		"bottomLineNetIncome": "14096000000",
+		"eps": "0.62",
+		"epsDiluted": "0.62",
+		"weightedAverageShsOut": "22735483871",
+		"weightedAverageShsOutDil": "22735483871"
+	}
+]
+
+About Balance Sheet Statement Bulk API
+This API is a powerful tool for:
+
+Financial Analysis: Retrieve balance sheet data to evaluate assets, liabilities, and equity, and assess the financial health of multiple companies.
+Bulk Data Retrieval: Get detailed financial positions for a wide range of companies in a single request, allowing for comparative analysis and portfolio evaluation.
+Corporate Health Assessment: Analyze metrics such as total debt, cash and cash equivalents, net receivables, and shareholder equity to determine the strength of a company’s balance sheet.
+Historical Tracking: Use balance sheet data to track a company’s financial position over time, identifying trends and changes in its financial standing.
+Endpoint:
+
+https://financialmodelingprep.com/stable/balance-sheet-statement-bulk?year=2025&period=Q1
+
+[
+	{
+		"date": "2025-03-31",
+		"symbol": "MTLRP.ME",
+		"reportedCurrency": "RUB",
+		"cik": "0000000000",
+		"filingDate": "2025-05-31",
+		"acceptedDate": "2025-03-31 07:00:00",
+		"fiscalYear": "2025",
+		"period": "Q1",
+		"cashAndCashEquivalents": "1985000",
+		"shortTermInvestments": "0",
+		"cashAndShortTermInvestments": "1985000",
+		"netReceivables": "9666577000",
+		"accountsReceivables": "9666577000",
+		"otherReceivables": "0",
+		"inventory": "4520000",
+		"prepaids": "0",
+		"otherCurrentAssets": "27293000",
+		"totalCurrentAssets": "9700830000",
+		"propertyPlantEquipmentNet": "194000",
+		"goodwill": "0",
+		"intangibleAssets": "5665000",
+		"goodwillAndIntangibleAssets": "5665000",
+		"longTermInvestments": "237373355000",
+		"taxAssets": "791813000",
+		"otherNonCurrentAssets": "0",
+		"totalNonCurrentAssets": "238171027000",
+		"otherAssets": "0",
+		"totalAssets": "247871857000",
+		"totalPayables": "3861497000",
+		"accountPayables": "3861497000",
+		"otherPayables": "0",
+		"accruedExpenses": "0",
+		"shortTermDebt": "4842848000",
+		"capitalLeaseObligationsCurrent": "0",
+		"taxPayables": "2484576000",
+		"deferredRevenue": "0",
+		"otherCurrentLiabilities": "146647000",
+		"totalCurrentLiabilities": "8851455000",
+		"longTermDebt": "178923999000",
+		"capitalLeaseObligationsNonCurrent": "0",
+		"deferredRevenueNonCurrent": "0",
+		"deferredTaxLiabilitiesNonCurrent": "737391000",
+		"otherNonCurrentLiabilities": "52574304000",
+		"totalNonCurrentLiabilities": "232235780000",
+		"otherLiabilities": "0",
+		"capitalLeaseObligations": "0",
+		"totalLiabilities": "244087635000",
+		"treasuryStock": "0",
+		"preferredStock": "0",
+		"commonStock": "5550277000",
+		"retainedEarnings": "-5066509000",
+		"additionalPaidInCapital": "6023340000",
+		"accumulatedOtherComprehensiveIncomeLoss": "0",
+		"otherTotalStockholdersEquity": "0",
+		"totalStockholdersEquity": "6784622000",
+		"totalEquity": "6784622000",
+		"minorityInterest": "0",
+		"totalLiabilitiesAndTotalEquity": "247871857000",
+		"totalInvestments": "237373355000",
+		"totalDebt": "183766847000",
+		"netDebt": "183764862000"
+	}
+]
+
+About Cash Flow Statement Bulk API
+This API is essential for:
+
+Tracking Cash Movements: Understand how a company generates and uses cash in its operations, investments, and financing activities.
+Free Cash Flow Analysis: Analyze free cash flow to assess a company's ability to generate cash after accounting for capital expenditures.
+Comparative Analysis: Access data for multiple companies at once to compare their cash flow trends, helping to identify companies with strong or weak cash flow management.
+Endpoint:
+
+https://financialmodelingprep.com/stable/cash-flow-statement-bulk?year=2025&period=Q1
+
+[
+	{
+		"date": "2025-03-31",
+		"symbol": "000001.SZ",
+		"reportedCurrency": "CNY",
+		"cik": "0000000000",
+		"filingDate": "2025-03-31",
+		"acceptedDate": "2025-03-31 00:00:00",
+		"fiscalYear": "2025",
+		"period": "Q1",
+		"netIncome": "0",
+		"depreciationAndAmortization": "0",
+		"deferredIncomeTax": "0",
+		"stockBasedCompensation": "0",
+		"changeInWorkingCapital": "0",
+		"accountsReceivables": "0",
+		"inventory": "0",
+		"accountsPayables": "0",
+		"otherWorkingCapital": "0",
+		"otherNonCashItems": "162946000000",
+		"netCashProvidedByOperatingActivities": "162946000000",
+		"investmentsInPropertyPlantAndEquipment": "-338000000",
+		"acquisitionsNet": "0",
+		"purchasesOfInvestments": "-227916000000",
+		"salesMaturitiesOfInvestments": "253172000000",
+		"otherInvestingActivities": "25000000",
+		"netCashProvidedByInvestingActivities": "24943000000",
+		"netDebtIssuance": "0",
+		"longTermNetDebtIssuance": "0",
+		"shortTermNetDebtIssuance": "0",
+		"netStockIssuance": "0",
+		"netCommonStockIssuance": "0",
+		"commonStockIssuance": "0",
+		"commonStockRepurchased": "0",
+		"netPreferredStockIssuance": "0",
+		"netDividendsPaid": "-2538000000",
+		"commonDividendsPaid": "-2538000000",
+		"preferredDividendsPaid": "0",
+		"otherFinancingActivities": "-155860000000",
+		"netCashProvidedByFinancingActivities": "-158398000000",
+		"effectOfForexChangesOnCash": "-130000000",
+		"netChangeInCash": "29361000000",
+		"cashAtEndOfPeriod": "286307000000",
+		"cashAtBeginningOfPeriod": "256946000000",
+		"operatingCashFlow": "162946000000",
+		"capitalExpenditure": "-338000000",
+		"freeCashFlow": "162608000000",
+		"incomeTaxesPaid": "0",
+		"interestPaid": "0"
+	}
+]
+
+About Eod Bulk API
+The EOD Bulk API provides:
+
+Historical Stock Prices: Access end-of-day stock prices for multiple symbols on a specific date.
+Open, High, Low, Close Prices: Retrieve detailed price data, including opening, high, low, and closing prices for each symbol.
+Volume and Adjusted Close: Get trading volume and adjusted closing prices to analyze stock performance and trading activity.
+Historical Data Analysis: Use historical stock prices to conduct technical analysis, backtesting, and trend forecasting.
+This API is designed for users who need to analyze stock prices across a wide range of companies, making it an efficient solution for bulk data retrieval.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/eod-bulk?date=2024-10-22
+
+[
+	{
+		"symbol": "EGS745W1C011.CA",
+		"date": "2024-10-22",
+		"open": "2.67",
+		"low": "2.7",
+		"high": "2.9",
+		"close": "2.93",
+		"adjClose": "2.93",
+		"volume": "920904"
+	}
+]

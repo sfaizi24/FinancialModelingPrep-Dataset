@@ -1,0 +1,373 @@
+About Company Profile Data API
+The FMP Company Profile Data API offers comprehensive insights into a company's financial status and operational details. This API is ideal for analysts, traders, and investors who need an in-depth look at a company’s core financial metrics and business information. Key features include:
+
+Stock Price and Market Cap: Get the latest stock price and market capitalization for the requested symbol.
+Company Details: Access information like company name, description, CEO, and industry classification
+Financial Metrics: Track important financial metrics like dividend yield, stock beta, and trading range to assess performance and volatility.
+Global Identifiers: Retrieve global financial identifiers such as CIK, ISIN, and CUSIP to ensure accurate tracking across platforms.
+Contact Information: Obtain contact details like the company’s address, phone number, and website for direct reference.
+IPO Data: Learn about the company's IPO date, sector, and whether it’s actively trading.
+Example Use Case
+An investor researching potential tech investments can use the Company Profile Data API to review the current financial health of Apple Inc., assess its performance, and explore key metrics like its stock range and market cap to inform buying or selling decisions.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/profile?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"price": 232.8,
+		"marketCap": 3500823120000,
+		"beta": 1.24,
+		"lastDividend": 0.99,
+		"range": "164.08-260.1",
+		"change": 4.79,
+		"changePercentage": 2.1008,
+		"volume": 0,
+		"averageVolume": 50542058,
+		"companyName": "Apple Inc.",
+		"currency": "USD",
+		"cik": "0000320193",
+		"isin": "US0378331005",
+		"cusip": "037833100",
+		"exchangeFullName": "NASDAQ Global Select",
+		"exchange": "NASDAQ",
+		"industry": "Consumer Electronics",
+		"website": "https://www.apple.com",
+		"description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple TV, Apple Watch, Beats products, and HomePod. It also provides AppleCare support and cloud services; and operates various platforms, including the App Store that allow customers to discov...",
+		"ceo": "Mr. Timothy D. Cook",
+		"sector": "Technology",
+		"country": "US",
+		"fullTimeEmployees": "164000",
+		"phone": "(408) 996-1010",
+		"address": "One Apple Park Way",
+		"city": "Cupertino",
+		"state": "CA",
+		"zip": "95014",
+		"image": "https://images.financialmodelingprep.com/symbol/AAPL.png",
+		"ipoDate": "1980-12-12",
+		"defaultImage": false,
+		"isEtf": false,
+		"isActivelyTrading": true,
+		"isAdr": false,
+		"isFund": false
+	}
+]
+
+About Company Profile by CIK API
+The FMP Company Profile by CIK API provides comprehensive company information for users who want to look up firms using the CIK code. Ideal for compliance officers, analysts, and investors, this API allows access to vital company details based on their CIK number. Key features include:
+
+Company Lookup by CIK: Easily find companies using their Central Index Key for fast and accurate identification.
+Stock Price & Market Cap: Get the most up-to-date stock price and market capitalization data for the requested company.
+Comprehensive Financial Data: Access essential financial metrics like beta, dividend yield, and trading range to evaluate a company's performance.
+Global Identifiers: Retrieve key identifiers such as CIK, ISIN, and CUSIP to streamline cross-platform tracking of companies.
+Company Information: Get in-depth details on the company's business operations, CEO, sector, and contact information.
+IPO & Industry Data: View company industry, sector, and IPO details to better understand its market position.
+Example Use Case
+A compliance officer conducting a regulatory review can use the Company Profile by CIK API to quickly retrieve comprehensive data on Apple Inc. using its unique CIK number, ensuring accuracy in cross-referencing the company across different databases.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/profile-cik?cik=320193
+
+[
+	{
+		"symbol": "AAPL",
+		"price": 232.8,
+		"marketCap": 3500823120000,
+		"beta": 1.24,
+		"lastDividend": 0.99,
+		"range": "164.08-260.1",
+		"change": 4.79,
+		"changePercentage": 2.1008,
+		"volume": 0,
+		"averageVolume": 50542058,
+		"companyName": "Apple Inc.",
+		"currency": "USD",
+		"cik": "0000320193",
+		"isin": "US0378331005",
+		"cusip": "037833100",
+		"exchangeFullName": "NASDAQ Global Select",
+		"exchange": "NASDAQ",
+		"industry": "Consumer Electronics",
+		"website": "https://www.apple.com",
+		"description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple TV, Apple Watch, Beats products, and HomePod. It also provides AppleCare support and cloud services; and operates various platforms, including the App Store that allow customers to discov...",
+		"ceo": "Mr. Timothy D. Cook",
+		"sector": "Technology",
+		"country": "US",
+		"fullTimeEmployees": "164000",
+		"phone": "(408) 996-1010",
+		"address": "One Apple Park Way",
+		"city": "Cupertino",
+		"state": "CA",
+		"zip": "95014",
+		"image": "https://images.financialmodelingprep.com/symbol/AAPL.png",
+		"ipoDate": "1980-12-12",
+		"defaultImage": false,
+		"isEtf": false,
+		"isActivelyTrading": true,
+		"isAdr": false,
+		"isFund": false
+	}
+]
+
+About Delisted Companies API
+The FMP Delisted Companies API provides valuable information on companies that have been removed from US stock exchanges. This API is essential for investors who want to:
+
+Avoid Trading in Delisted Stocks: Identify stocks that have been delisted to prevent potential losses from trading in these securities.
+Understand Reasons for Delisting: Learn about the various factors that can lead to a company's delisting, such as financial difficulties, failure to comply with exchange regulations, or mergers and acquisitions.
+Identify Financial Troubles: Use the delisted companies list as an indicator of potential financial instability or other underlying issues within a company.
+This API helps investors make informed decisions by providing timely information on companies that are no longer publicly traded on US exchanges.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/delisted-companies?page=0&limit=100
+
+[
+	{
+		"symbol": "BRQSF",
+		"companyName": "Borqs Technologies, Inc.",
+		"exchange": "PNK",
+		"ipoDate": "2017-08-24",
+		"delistedDate": "2025-02-03"
+	}
+]
+
+About Company Employee Count API
+The FMP Company Employee Count API offers users access to essential data regarding a company’s workforce size. This API is especially valuable for analysts, investors, and HR professionals who need to understand company operations, staffing trends, and workforce management. Key features include:
+
+Employee Count: Easily retrieve the total number of employees for a company based on the most recent filing data.
+Period of Report: Understand the timeframe of the reported employee count by accessing the period of the report.
+Filing Date and Form Type: View the filing date and type of document (e.g., 10-K) to understand when and where the workforce data was disclosed.
+Direct SEC Links: Access the official SEC source document for transparency and additional details.
+This API is ideal for those analyzing company size, productivity, or workforce trends and provides a clear snapshot of company operations through its employee count.
+
+Example Use Case
+An equity analyst can use the Company Employee Count API to assess workforce growth at Apple Inc. over the years, comparing it to changes in the company’s revenue and profitability.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/employee-count?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"cik": "0000320193",
+		"acceptanceTime": "2024-11-01 06:01:36",
+		"periodOfReport": "2024-09-28",
+		"companyName": "Apple Inc.",
+		"formType": "10-K",
+		"filingDate": "2024-11-01",
+		"employeeCount": 164000,
+		"source": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/0000320193-24-000123-index.htm"
+	}
+]
+
+About Company Historical Employee Count API
+The FMP Company Historical Employee Count API is designed for users who need to track workforce trends for a company across various reporting periods. This data is especially useful for analyzing long-term growth, staffing changes, and the relationship between workforce size and financial performance. Key features include:
+
+Historical Employee Count: Retrieve workforce size over different periods to analyze growth or decline trends.
+Report Periods: Gain insights into specific timeframes of employee data, tied to annual or quarterly financial reports.
+Filing Date and Form Type: Understand when the employee data was reported, along with the corresponding SEC form type (e.g., 10-K).
+Direct SEC Links: Access the original SEC filings for in-depth research and transparency.
+This API is ideal for HR analysts, investors, and business strategists who want to track workforce changes and assess their impact on company operations.
+
+Example Use Case
+A financial analyst can use the Company Historical Employee Count API to compare the employee count of Apple Inc. over a five-year period to evaluate how workforce changes correlate with revenue growth and market expansion.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/historical-employee-count?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"cik": "0000320193",
+		"acceptanceTime": "2024-11-01 06:01:36",
+		"periodOfReport": "2024-09-28",
+		"companyName": "Apple Inc.",
+		"formType": "10-K",
+		"filingDate": "2024-11-01",
+		"employeeCount": 164000,
+		"source": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/0000320193-24-000123-index.htm"
+	}
+]
+
+About Company Market Cap API
+The FMP Company Market Capitalization API delivers precise data on a company's market cap for a selected date, making it an indispensable tool for investors, analysts, and financial professionals. Key features include:
+
+Market Capitalization on Specific Dates: Retrieve accurate market cap data for companies, allowing you to track changes over time.
+Company Valuation Analysis: Analyze a company's size and value within the stock market based on its market capitalization.
+Historical and Real-Time Capabilities: Access both historical and real-time market cap data for better decision-making.
+This API is ideal for investors, portfolio managers, and analysts who need a quick way to assess company size and evaluate its standing within the market.
+
+Example Use Case
+An investor tracking Apple Inc.'s market performance can use the Company Market Capitalization API to retrieve the company's market cap on specific dates, helping them understand Apple's valuation trends and compare it with competitors.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/market-capitalization?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-02-04",
+		"marketCap": 3500823120000
+	}
+]
+
+About Batch Market Cap API
+The FMP Batch Market Capitalization API offers a fast and efficient way to gather market cap data for several companies in one batch request. Key features include:
+
+Multiple Companies in One Request: Retrieve the market capitalization for numerous companies in a single API call, saving time and effort.
+Compare Market Sizes: Analyze and compare the market caps of different companies to evaluate their relative size and market standing.
+Real-Time and Historical Market Caps: Access both current and past market capitalization data to track performance over time.
+This API is perfect for investors, analysts, and portfolio managers who need to compare multiple companies at once, helping to identify investment opportunities and market trends quickly.
+
+Example Use Case
+An analyst researching tech giants can use the Batch Market Capitalization API to retrieve market cap data for Apple, Microsoft, and Google in one request. This allows them to quickly compare these companies' market sizes and assess their positions within the industry.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/market-capitalization-batch?symbols=AAPL,MSFT,GOOG
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-02-04",
+		"marketCap": 3500823120000
+	}
+]
+
+About Historical Market Cap API
+The FMP Historical Market Capitalization API allows users to retrieve past market cap data for any company listed in the database. Key features include:
+
+Track Long-Term Performance: Retrieve historical market cap data to analyze how a company's value has evolved over time.
+Identify Trends: Use historical data to spot trends, whether it's consistent growth, decline, or periods of volatility.
+Informed Investment Decisions: Investors can use this data to evaluate a company's long-term performance and make more informed investment choices.
+This API is ideal for analysts, portfolio managers, and investors looking to assess a company’s growth trajectory or historical performance in the market.
+
+This API has parameters [symbol,limit,from,to]. Limit is a number, from and to are dates.
+
+Example Use Case
+An investor looking to evaluate Apple's historical performance can use the Historical Market Capitalization API to retrieve past market cap data. This helps them understand how Apple's valuation has changed over time, identifying periods of growth or decline and comparing it with overall market conditions.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/historical-market-capitalization?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2024-02-29",
+		"marketCap": 2784608472000
+	}
+]
+
+About Company Share Float & Liquidity API
+The FMP Company Share Float and Liquidity API provides essential data on the number of publicly traded shares for a given company, also known as the company’s float. This endpoint helps investors:
+
+Evaluate Stock Liquidity: Identify the number of shares available for trading, which directly impacts the liquidity of the stock.
+Assess Volatility: Understand how the size of a company’s float can influence stock price volatility, with smaller floats generally leading to higher volatility.
+Make Informed Decisions: Use float data to identify companies with large or small floats, helping to assess the potential risk and reward of investing in those companies.
+For example, companies with a large float tend to have more liquid stocks and less price volatility, while companies with a small float may experience higher price fluctuations due to lower liquidity.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/shares-float?symbol=AAPL
+
+[
+	{
+		"symbol": "AAPL",
+		"date": "2025-02-04 17:01:35",
+		"freeFloat": 99.9095,
+		"floatShares": 15024290700,
+		"outstandingShares": 15037900000
+	}
+]
+
+About All Shares Float API
+The FMP All Shares Float API provides valuable data on the liquidity of publicly traded companies by offering insights into shares available for trading. This API is essential for investors, analysts, and financial professionals seeking to understand a company's market activity. Key features include:
+
+Free Float Data: Understand the number of shares available for public trading, excluding closely held shares owned by insiders, employees, or major shareholders.
+Float Shares & Outstanding Shares: Retrieve the total number of shares that are both floating on the market and outstanding, helping you analyze a company's total market exposure.
+Comparative Liquidity Analysis: With access to free float and outstanding shares across multiple companies, you can compare liquidity, determine market stability, and evaluate investment potential.
+This API serves as a critical resource for evaluating the ease with which shares can be bought or sold on the open market, offering a detailed picture of company share availability and market behavior.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/shares-float-all?page=0&limit=1000
+
+[
+	{
+		"symbol": "6898.HK",
+		"date": "2025-02-04 17:27:01",
+		"freeFloat": 33.2536,
+		"floatShares": 318128880,
+		"outstandingShares": 956675009
+	}
+]
+
+About Latest Mergers & Acquisitions API
+The FMP Latest Mergers and Acquisitions API delivers the most recent information on corporate mergers and acquisitions, giving users access to essential data about company takeovers and transactions. Key features include:
+
+Transaction Details: Get information on the companies involved, including acquiring and targeted firms.
+Filing Information: Access official filings and documents from the SEC for a deeper analysis of the deal.
+Timely Updates: Stay informed with the most recent mergers and acquisitions data, providing insights into market consolidation.
+This API is ideal for analysts, investors, and corporate strategists looking to track corporate activity and make informed decisions based on the latest M&A trends.
+
+Example Use Case
+An investment analyst can use the Latest Mergers and Acquisitions API to track recent acquisitions and evaluate the impact of these deals on the companies involved. The data can be used to assess market consolidation, competitive dynamics, and potential investment opportunities.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/mergers-acquisitions-latest?page=0&limit=100
+
+[
+	{
+		"symbol": "NLOK",
+		"companyName": "NortonLifeLock Inc.",
+		"cik": "0000849399",
+		"targetedCompanyName": "MoneyLion Inc.",
+		"targetedCik": "0001807846",
+		"targetedSymbol": "ML",
+		"transactionDate": "2025-02-03",
+		"acceptedDate": "2025-02-03 06:01:10",
+		"link": "https://www.sec.gov/Archives/edgar/data/849399/000114036125002752/ny20039778x6_s4.htm"
+	}
+]
+
+About Search Mergers & Acquisitions API
+The FMP Search Mergers and Acquisitions API allows users to find mergers and acquisitions by company name, enabling a deeper understanding of corporate activity. This API is useful for those needing detailed data on past and ongoing deals, including:
+
+Company-Specific M&A Data: Search for M&A transactions involving specific companies, either as the acquirer or target.
+Transaction Dates: Access the exact dates of the transactions for precise tracking.
+Filing Links: Obtain links to official SEC documents for detailed information on the terms and conditions of the deal.
+This API is perfect for financial analysts, researchers, and corporate strategists who need comprehensive M&A data to inform business or investment decisions.
+
+Example Use Case
+A corporate strategist can use the Search Mergers and Acquisitions API to identify past acquisition targets of a competitor. This information can help shape competitive strategies or identify industry trends that may affect future business opportunities.
+
+Endpoint:
+
+https://financialmodelingprep.com/stable/mergers-acquisitions-search?name=Apple
+
+[
+	{
+		"symbol": "PEGY",
+		"companyName": "Pineapple Energy Inc.",
+		"cik": "0000022701",
+		"targetedCompanyName": "Communications Systems, Inc.",
+		"targetedCik": "0000022701",
+		"targetedSymbol": "JCS",
+		"transactionDate": "2021-11-12",
+		"acceptedDate": "2021-11-12 09:54:22",
+		"link": "https://www.sec.gov/Archives/edgar/data/22701/000089710121000932/a211292_s-4.htm"
+	}
+]
+
+
+
+
+
