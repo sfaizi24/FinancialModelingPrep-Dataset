@@ -24,7 +24,7 @@ My main goal was to create a dataset that minimized survivorship bias, but of co
 ### Incomplete Historical Universe & Delisting Bias
 FMP definitey has issues with incomplete symbols, so I would **not** say that this dataset will solve for the de-listing bias. For example, the company Michaels (ticker: MIK), which was publicly traded until its acquisition in 2021, was absent from the delisted symbols list. I emailed FMP about this and they basically said "wow yeah that sucks lol". This suggests that M&A activity may not be fully captured.
 
-On top of that, the number of unique companies per year in my dataset doesn't really line up with what we know about market history. McKinsey cites that the number of publicly traded US companies has been falling since the 90s, but my data shows the opposite. This makes me think FMP's de-listed companies endpoint is pretty bad.
+On top of that, the number of unique companies per year in my dataset doesn't really line up with what we know about market history. McKinsey cites that there were like 6000+ publicly traded companies in 1996 and that the number has been falling since then, but my data shows the opposite. This makes me think FMP's de-listed companies endpoint is pretty bad.
 
 ![Number of Companies with Price Data by Year](Analysis/symbols_per_year.png)
 
