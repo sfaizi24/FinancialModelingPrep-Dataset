@@ -1,32 +1,41 @@
-## Financial Market Prep Data Engineering Project
+# Financial Modeling Prep Data Pipeline
 
-This project contains a Python-based data engineering pipeline to construct a historical financial dataset for investment backtesting. It uses the Financial Modeling Prep (FMP) API to gather data.
+## My Motivation
 
-### Objective
+I started this project to build a point-in-time dataset for the purpose of backtesting long-term portfolio strategies, drawing inspiration from the work of Dimensional Fund Advisors and UChicago faculty.
 
-The goal is to create two datasets for companies that have had a market capitalization of over $100 million in the last 10 years:
+Honestly, I went into this with no real experience in querying APIs. I spent a lot of time digging through the FMP docs, running manual queries to figure out what the data flow should look like, and then pseudocoded the whole thing. From there, I worked with Gemini to code each notebook. I validated the data at every step, so I'm confident the final dataset is as good as FMP's data is.
 
-1.  **Quarterly Total Return Stock Prices**: A dataset of end-of-quarter stock prices for the last 10 years, adjusted for splits, dividends, and other corporate actions to reflect total returns.
-2.  **Point-in-Time Fundamental Metrics**: A dataset of key financial metrics (assets, debt, revenue, EPS, employee count) as they were reported, along with company metadata (country, sector, industry).
+## How to Run the Pipeline
 
-### Structure
+1.  **API Key**: You have to get your own FMP API key. Create a `.env` file in the root directory and stick this in it:
+    `API_KEY='your_key_goes_here'`
 
--   `data_pipeline/`: Main source code directory.
-    -   `main.py`: The entry point for running the data pipeline.
--   `requirements.txt`: Project dependencies.
--   `output/`: Directory where the final CSV datasets will be saved.
+2.  **Run Order**: Just run the notebooks in this order, as each one builds on the last.
+    1.  `Ticker Symbols/Creating Symbol Lists.ipynb`
+    2.  `Statements/Getting Statement Data.ipynb`
+    3.  `Prices/Getting Price Data.ipynb`
+    4.  `Market Caps/Getting Market Caps.ipynb`
 
-### How to Run
+## Key Findings & Data Considerations
 
-1.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-2.  Set your FMP API key as an environment variable:
-    ```bash
-    export FMP_API_KEY='your_api_key'
-    ```
-3.  Run the main script:
-    ```bash
-    python data_pipeline/main.py
-    ```
+My main goal was to create a dataset that minimized survivorship bias, but of course, it's all limited by the source data. While I managed to pull a massive amount of historical data, I did run into some important limitations with the FMP API.
+
+### Incomplete Historical Universe & Delisting Bias
+FMP definitey has issues with incomplete symbols, so I would **not** say that this dataset will solve for the de-listing bias. For example, the company Michaels (ticker: MIK), which was publicly traded until its acquisition in 2021, was absent from the delisted symbols list. I emailed FMP about this and they basically said "wow yeah that sucks lol". This suggests that M&A activity may not be fully captured.
+
+On top of that, the number of unique companies per year in my dataset doesn't really line up with what we know about market history. McKinsey cites that the number of publicly traded US companies has been falling since the 90s, but my data shows the opposite. This makes me think FMP's de-listed companies endpoint is pretty bad.
+
+![Number of Companies with Price Data by Year](Analysis/symbols_per_year.png)
+
+### Symbol Inclusion Criteria
+I made the call to remove any symbol with a "." in the name. My thinking was that these are usually ADRs or something similar, and I wanted to focus on common stock. I'm not 100% sure this was the right move, but when I checked the Russell 3000, only 5 out of 2,603 symbols had a ".", so I feel pretty safe about the decision's impact.
+
+### A Note on Local Data Sourcing
+You'll notice a step in the `Prices/Getting Price Data.ipynb` notebook that tries to process a large local CSV file. This was just a personal workaround for me, as I had a bunch of data from previous failed attempts. If you're running this from scratch, you don't need this file. You can just let that step fail; the next part of the notebook will call the API to get all the data it needs anyway.
+
+### Robust and Resumable Fetching
+The biggest technical hurdle was figuring out how to download decades of data for over 10,000 symbols without it failing halfway through. I built the fetching scripts to be:
+-   **Asynchronous**: Using `aiohttp` and `asyncio` to handle dozens of concurrent API requests.
+-   **Resumable**: Data for each symbol is saved to a `partials` directory. A stopped script can be restarted without losing progress.
+-   **Rate-Limit Aware**: The scripts include delays and semaphore limits to stay within the FMP API's rate limits.
